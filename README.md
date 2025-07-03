@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# React Dashboard - Post Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React dashboard application that fetches and displays posts from JSONPlaceholder API with real-time search functionality and interactive post details.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Real-time Search**: Debounced search with clear button functionality
+- **Interactive Post List**: Clickable titles with visual selection states
+- **Dynamic Details Panel**: Shows selected post details or empty state
+- **Loading States**: Smooth loading experiences for data fetching and search
+- **Responsive Design**: Clean, modern UI with consistent styling
+- **Component Architecture**: Modular code structure for maintainability
 
-### `npm start`
+## 🛠️ Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React 18** - Frontend framework
+- **Tailwind CSS** - Styling and responsive design
+- **JSONPlaceholder API** - Data source for posts
+- **React Hooks** - State management (useState, useEffect)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Project Structure
 
-### `npm test`
+```
+src/
+├── Component/
+│   ├── ListOfUsers.jsx      # Main container component
+│   ├── SearchBar.jsx        # Search input component
+│   ├── TitleList.jsx        # Post list component
+│   └── TitleDescription.jsx # Post details component
+├── Dashboard.jsx            # Dashboard wrapper
+└── App.js                   # Root component
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (version 14 or higher)
+- npm or yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Aanshi-Singh/Dashboard.git
+   cd Dashboard
+   ```
 
-### `npm run eject`
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Open your browser**
+   Navigate to `http://localhost:3000`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎯 How to Use
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **View Posts**: The application loads posts automatically from the API
+2. **Search Posts**: Use the search bar to filter posts by title
+3. **Select Post**: Click on any post title to view its details
+4. **Clear Search**: Use the "Clear" button to reset the search
 
-## Learn More
+## 🔧 Key Components
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### SearchBar
+- Debounced search input (300ms delay)
+- Clear button functionality
+- Responsive design
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### TitleList
+- Displays filtered post titles
+- Visual selection states
+- Loading indicators
+- Scrollable list with fixed height
 
-### Code Splitting
+### DetailCard
+- Shows selected post details
+- Empty state when no post is selected
+- Consistent styling with the list
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🎨 UI/UX Features
 
-### Analyzing the Bundle Size
+- **Modern Design**: Clean, minimalist interface
+- **Visual Feedback**: Hover states and selection indicators
+- **Loading States**: Smooth loading animations
+- **Responsive Layout**: Works on different screen sizes
+- **Consistent Styling**: Unified color scheme and spacing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 👨‍💻 Author
 
-### Making a Progressive Web App
+**Aanshi Singh**
+- GitHub: [@Aanshi-Singh](https://github.com/Aanshi-Singh)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🙏 Acknowledgments
 
-### Advanced Configuration
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/) for providing the API
+- [Tailwind CSS](https://tailwindcss.com/) for the styling framework
+- [React](https://reactjs.org/) for the amazing framework
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⭐ If you found this project helpful, please give it a star!
