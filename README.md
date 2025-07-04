@@ -1,15 +1,17 @@
 # React Dashboard - Post Management System
 
-A modern React dashboard application that fetches and displays posts from JSONPlaceholder API with real-time search functionality and interactive post details.
+A modern React dashboard application that fetches and displays posts from JSONPlaceholder API with real-time search, pagination, error handling, and interactive post details in a modal.
 
 ## 🚀 Features
 
-- **Real-time Search**: Debounced search with clear button functionality
-- **Interactive Post List**: Clickable titles with visual selection states
-- **Dynamic Details Panel**: Shows selected post details or empty state
-- **Loading States**: Smooth loading experiences for data fetching and search
-- **Responsive Design**: Clean, modern UI with consistent styling
-- **Component Architecture**: Modular code structure for maintainability
+- **Real-time Search**: Debounced search with clear button
+- **Interactive Post List**: Clickable titles with selection and hover states
+- **Modal Details View**: View full post details in a popup modal
+- **Pagination**: Efficiently handle large datasets with page navigation
+- **Loading & Error States**: Smooth loading indicators and user-friendly error messages
+- **Consistent Styling**: Unified color scheme, button, and container styles
+- **Responsive Design**: Works on desktop and mobile
+- **Lazy Loading**: Images are lazy loaded for performance
 
 ## 🛠️ Technologies Used
 
@@ -17,6 +19,7 @@ A modern React dashboard application that fetches and displays posts from JSONPl
 - **Tailwind CSS** - Styling and responsive design
 - **JSONPlaceholder API** - Data source for posts
 - **React Hooks** - State management (useState, useEffect)
+- **PropTypes** - Runtime prop validation
 
 ## 📁 Project Structure
 
@@ -25,8 +28,9 @@ src/
 ├── Component/
 │   ├── ListOfUsers.jsx      # Main container component
 │   ├── SearchBar.jsx        # Search input component
-│   ├── TitleList.jsx        # Post list component
-│   └── TitleDescription.jsx # Post details component
+│   ├── TitleList.jsx        # Post list component (with selection/hover)
+│   ├── ProductModal.jsx     # Modal for post details
+│   └── ErrorFallback.jsx    # Error UI component
 ├── Dashboard.jsx            # Dashboard wrapper
 └── App.js                   # Root component
 ```
@@ -63,34 +67,52 @@ src/
 
 1. **View Posts**: The application loads posts automatically from the API
 2. **Search Posts**: Use the search bar to filter posts by title
-3. **Select Post**: Click on any post title to view its details
+3. **Select Post**: Click on any post title to view its details in a modal
 4. **Clear Search**: Use the "Clear" button to reset the search
+5. **Paginate**: Use Prev/Next to navigate through pages
+6. **Error Handling**: Friendly error messages and retry button if data fails to load
 
 ## 🔧 Key Components
 
 ### SearchBar
 - Debounced search input (300ms delay)
 - Clear button functionality
-- Responsive design
+- Consistent button styling
 
 ### TitleList
 - Displays filtered post titles
-- Visual selection states
-- Loading indicators
+- Visual selection and hover states
+- Loading and error indicators
+- Pagination controls
 - Scrollable list with fixed height
 
-### DetailCard
-- Shows selected post details
-- Empty state when no post is selected
+### ProductModal
+- Shows selected post details in a popup
 - Consistent styling with the list
+- Close button with unified style
+
+### ErrorFallback
+- User-friendly error messages
+- Retry button with consistent style
 
 ## 🎨 UI/UX Features
 
 - **Modern Design**: Clean, minimalist interface
-- **Visual Feedback**: Hover states and selection indicators
-- **Loading States**: Smooth loading animations
-- **Responsive Layout**: Works on different screen sizes
 - **Consistent Styling**: Unified color scheme and spacing
+- **Visual Feedback**: Hover and selection indicators
+- **Loading/Error States**: Smooth loading and error UI
+- **Responsive Layout**: Works on all screen sizes
+- **Lazy Loading**: Images are lazy loaded for performance
+
+## 🌐 Deployment
+
+This project is deployed on GitHub Pages:
+- **Live Demo:** [View Dashboard](https://aanshi-singh.github.io/Dashboard/)
+
+To deploy your own version:
+```bash
+npm run deploy
+```
 
 ## 👨‍💻 Author
 
